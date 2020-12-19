@@ -1,0 +1,45 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+.btn{
+    background: #2800fa;
+    border: none;
+    font-size: 20px;
+    padding: 20px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+ }
+.btn:active{
+    outline: none;
+}
+.btn:focus{
+    outline: none;
+}
+
+.btn .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
